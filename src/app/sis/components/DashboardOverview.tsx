@@ -72,7 +72,16 @@ export default function DashboardOverview({ data }: { data: DashboardData }) {
 
       <div className="sis-stats-grid">
         {statCards.map((card) => (
-          <StatCard key={card.label} label={card.label} value={card.value} subcopy={card.subcopy} detail={card.detail} tone={card.tone} />
+          <StatCard
+            key={card.label}
+            label={card.label}
+            value={card.value}
+            subcopy={card.subcopy}
+            detail={card.detail}
+            tone={card.tone}
+            badge={card.badge}
+            icon={card.icon}
+          />
         ))}
       </div>
 
