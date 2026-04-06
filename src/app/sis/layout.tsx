@@ -7,6 +7,8 @@ import { SyncProvider } from "./components/SyncProvider";
 import SidebarNav from "./components/SidebarNav";
 import TopbarMeta from "./components/TopbarMeta";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "SIS",
   robots: {

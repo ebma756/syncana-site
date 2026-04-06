@@ -7,6 +7,8 @@ import { superAdminAccount } from "@/lib/session";
 import { useSession } from "@/app/sis/components/SessionProvider";
 import { loadStaffMembers, permissionsSummary, seedStaff } from "@/app/sis/employees/employee-storage";
 
+export const dynamic = "force-dynamic";
+
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
