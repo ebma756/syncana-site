@@ -77,9 +77,9 @@ export default function DashboardOverview({ data }: { data: DashboardData }) {
             label={card.label}
             value={card.value}
             subcopy={card.subcopy}
-            detail={card.detail}
+            detail={"detail" in card ? card.detail : undefined}
             tone={card.tone}
-            badge={card.badge}
+            badge={"badge" in card ? card.badge : undefined}
             icon={card.icon}
           />
         ))}
