@@ -6,6 +6,7 @@ import { loadStudents } from "../students/student-storage";
 import {
   loadManagedClasses,
   ManagedClass,
+  type ManagedClassStatus,
   persistManagedClasses,
   seedClasses,
 } from "./class-storage";
@@ -42,7 +43,12 @@ export default function ClassesConsole() {
     startTransition(() => {
       setClasses((current) => {
         const next = current.map((item) =>
-          item.id === classId ? { ...item, status: item.status === "Active" ? "Inactive" : "Active" } : item,
+          item.id === classId
+            ? {
+                ...item,
+                status: (item.status === "Active" ? "Inactive" : "Active") as ManagedClassStatus,
+              }
+            : item,
         );
         persistManagedClasses(next);
         return next;
