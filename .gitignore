@@ -4,4 +4,5 @@
 .next
 .next-corrupt-*
 .open-next
+.DS_Store
 node_modules
