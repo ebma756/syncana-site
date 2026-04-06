@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Suspense, useEffect, useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { roleDefinitions } from "@/lib/rbac";
 import { superAdminAccount } from "@/lib/session";
@@ -9,7 +9,7 @@ import { loadStaffMembers, permissionsSummary, seedStaff } from "@/app/sis/emplo
 
 export const dynamic = "force-dynamic";
 
-export default function LoginPage() {
+function LoginPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const nextPath = searchParams.get("next") || "/sis";
@@ -116,5 +116,13 @@ export default function LoginPage() {
         </section>
       </section>
     </main>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={<div className="sis-login-shell">Loading profiles…</div>}>
+      <LoginPageContent />
+    </Suspense>
   );
 }
