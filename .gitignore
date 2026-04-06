@@ -1,5 +1,7 @@
 .env.local
 .env.*.local
+.dev.vars
 .next
 .next-corrupt-*
+.open-next
 node_modules
