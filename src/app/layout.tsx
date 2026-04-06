@@ -6,7 +6,6 @@ import "@fontsource/manrope/600.css";
 import "@fontsource/host-grotesk/400.css";
 import "@fontsource/host-grotesk/500.css";
 import "@fontsource/host-grotesk/700.css";
-import { SessionProvider } from "@/app/sis/components/SessionProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -57,9 +56,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning>
-        <SessionProvider>{children}</SessionProvider>
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }
