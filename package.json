@@ -1,0 +1,30 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@sis/types": "workspace:*",
+    "@fontsource/host-grotesk": "^5.2.8",
+    "@fontsource/manrope": "^5.2.6",
+    "@fontsource/space-grotesk": "^5.2.6",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "simple-icons": "^16.13.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "^24.6.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "eslint": "^9.38.0",
+    "eslint-config-next": "^16.0.0",
+    "typescript": "^5.9.3"
+  }
+}
