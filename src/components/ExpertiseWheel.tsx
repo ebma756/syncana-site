@@ -10,6 +10,8 @@ import {
   type KeyboardEvent,
 } from "react";
 
+import Image from "next/image";
+
 import { syncana360Steps, type Locale } from "@/data/site";
 
 const WHEEL_SIZE = 520;
@@ -96,7 +98,7 @@ export function ExpertiseWheel({ locale }: ExpertiseWheelProps) {
   const wheelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const desktopMedia = window.matchMedia("(min-width: 981px)");
+    const desktopMedia = window.matchMedia("(min-width: 1024px)");
     const reducedMotionMedia = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const updateDesktop = () => setIsDesktop(desktopMedia.matches);
@@ -207,9 +209,19 @@ export function ExpertiseWheel({ locale }: ExpertiseWheelProps) {
           </p>
         </div>
 
+        <figure className="wheel-mobile-image" aria-label="Syncana 360 wheel">
+          <Image
+            alt={locale === "en" ? "Syncana 360 process wheel" : "Roda do processo Syncana 360"}
+            height={640}
+            priority={false}
+            src="/images/syncana-360-wheel.svg"
+            width={640}
+          />
+        </figure>
+
         <div
           ref={wheelRef}
-          className="expertise-wheel"
+          className="expertise-wheel wheel-container"
           onBlur={handleBlur}
           onMouseLeave={handleWheelLeave}
         >

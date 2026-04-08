@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 import { GlobeIcon } from "@/components/icons";
 import type { Locale } from "@/data/site";
@@ -9,6 +8,7 @@ import type { Locale } from "@/data/site";
 type LanguageSwitcherProps = {
   locale: Locale;
   label: string;
+  pathname: string;
 };
 
 function toEnglishPath(pathname: string) {
@@ -38,10 +38,11 @@ function toPortuguesePath(pathname: string) {
 export function LanguageSwitcher({
   locale,
   label,
+  pathname,
 }: LanguageSwitcherProps) {
-  const pathname = usePathname() || "/";
+  const safePathname = pathname || "/";
   const targetPath =
-    locale === "en" ? toPortuguesePath(pathname) : toEnglishPath(pathname);
+    locale === "en" ? toPortuguesePath(safePathname) : toEnglishPath(safePathname);
 
   return (
     <Link className="language-switcher" href={targetPath}>

@@ -49,7 +49,11 @@ export function SiteFooter({ locale }: SiteFooterProps) {
           <h3>{copy.footerServicesTitle}</h3>
           <div className="footer-links">
             {services.map((service) => (
-              <Link key={service.key} href={withLocale(locale, "/our-expertise")}>
+              <Link
+                key={service.key}
+                href={withLocale(locale, `/our-expertise#service-${service.key}`)}
+                scroll={false}
+              >
                 {service.title[locale]}
               </Link>
             ))}

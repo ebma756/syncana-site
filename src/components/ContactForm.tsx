@@ -147,10 +147,6 @@ export function ContactForm({ locale }: ContactFormProps) {
           <input name="company" required type="text" />
         </label>
         <label className="field">
-          <span>{copy.form.location}</span>
-          <input name="location" required type="text" />
-        </label>
-        <label className="field">
           <span>{copy.form.province}</span>
           <select defaultValue="" name="province" required>
             <option value="" disabled>
@@ -162,6 +158,10 @@ export function ContactForm({ locale }: ContactFormProps) {
               </option>
             ))}
           </select>
+        </label>
+        <label className="field">
+          <span>{copy.form.location}</span>
+          <input name="location" required type="text" />
         </label>
         <label className="field field--full">
           <span>{copy.form.service}</span>

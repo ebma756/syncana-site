@@ -22,6 +22,7 @@ import {
 import { PartnerStrip } from "@/components/PartnerStrip";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
+import { HashScroller } from "@/components/HashScroller";
 import {
   blogPosts,
   contactDetails,
@@ -190,7 +191,7 @@ function ServiceCard({
             <li key={item}>{item}</li>
           ))}
       </ul>
-      <Link className="text-link" href={serviceHref}>
+      <Link className="text-link" href={serviceHref} scroll={false}>
         <span>{locale === "en" ? "Explore service" : "Explorar serviço"}</span>
         <ChevronRightIcon className="text-link__icon" />
       </Link>
@@ -293,7 +294,7 @@ export function HomePage({ locale }: { locale: Locale }) {
   return (
     <PageShell locale={locale} pathname={withLocale(locale, "/")}>
       <section className="hero-section hero-section--home">
-        <div className="container hero-grid">
+        <div className="container hero-grid hero-grid--with-visual">
           <div className="hero-copy">
             <span className="eyebrow">{copy.home.kicker}</span>
             <h1>{copy.home.title}</h1>
@@ -386,7 +387,7 @@ export function HomePage({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <section className="content-section">
+      <section className="content-section content-section--why">
         <div className="container">
           <SectionHeading
             align="center"
@@ -449,6 +450,7 @@ export function ExpertisePage({ locale }: { locale: Locale }) {
 
   return (
     <PageShell locale={locale} pathname={withLocale(locale, "/our-expertise")}>
+      <HashScroller />
       <section className="hero-section hero-section--page">
         <div className="container hero-grid">
           <div className="hero-copy">
@@ -836,23 +838,26 @@ export function ContactPage({ locale }: { locale: Locale }) {
   return (
     <PageShell locale={locale} pathname={withLocale(locale, "/contact")}>
       <section className="hero-section hero-section--page">
-        <div className="container hero-grid">
+        <div className="container hero-grid hero-grid--with-visual">
           <div className="hero-copy">
             <span className="eyebrow">{copy.contact.kicker}</span>
             <h1>{copy.contact.title}</h1>
             <p className="hero-copy__lead">{copy.contact.description}</p>
           </div>
-          <BrandVisual
-            chips={[
-              contactDetails.phone,
-              contactDetails.email,
-              locale === "en" ? "Maputo, Mozambique" : "Maputo, Moçambique",
-            ]}
-            description={copy.contact.cardsBody}
-            eyebrow={copy.contact.kicker}
-            title={copy.contact.cardsTitle}
-            variant="contact"
-          />
+          <figure className="contact-hero-media" aria-label={copy.contact.cardsTitle}>
+            <Image
+              alt={
+                locale === "en"
+                  ? "IT professional reviewing systems as part of an audit request."
+                  : "Profissional de TI a rever sistemas como parte de um pedido de auditoria."
+              }
+              className="contact-hero-media__image"
+              fill
+              priority
+              sizes="(max-width: 980px) 100vw, 42vw"
+              src="/images/contact-hero.jpg"
+            />
+          </figure>
         </div>
       </section>
 
@@ -869,20 +874,49 @@ export function ContactPage({ locale }: { locale: Locale }) {
             <SectionHeading body={copy.contact.formBody} title={copy.contact.formTitle} />
             <ContactForm locale={locale} />
           </div>
-          <div className="stack-panel">
-            <BrandVisual
-              chips={[
-                locale === "en" ? "Audit-first" : "Auditoria primeiro",
-                locale === "en" ? "Configurable delivery" : "Entrega configurável",
-                locale === "en" ? "Maputo MSP" : "MSP em Maputo",
-              ]}
-              compact
-              description={copy.contact.formBody}
-              eyebrow={locale === "en" ? "Engagement flow" : "Fluxo de contacto"}
-              title={copy.contact.formTitle}
-              variant="contact"
-            />
-          </div>
+          <aside className="contact-audit-visual" aria-label={copy.contact.formTitle}>
+            <div className="contact-audit-visual__mosaic">
+              <div className="contact-audit-visual__tile contact-audit-visual__tile--primary">
+                <Image
+                  alt={
+                    locale === "en"
+                      ? "IT support specialist preparing for an audit engagement."
+                      : "Especialista de suporte de TI a preparar uma auditoria."
+                  }
+                  className="contact-audit-visual__image"
+                  fill
+                  sizes="(max-width: 980px) 100vw, 38vw"
+                  src="/images/services/managed-it-audit.jpg"
+                />
+              </div>
+              <div className="contact-audit-visual__tile contact-audit-visual__tile--secondary">
+                <Image
+                  alt={
+                    locale === "en"
+                      ? "Security review representing risk assessment and controls."
+                      : "Revisao de seguranca a representar avaliacao de risco e controlos."
+                  }
+                  className="contact-audit-visual__image"
+                  fill
+                  sizes="(max-width: 980px) 50vw, 18vw"
+                  src="/images/services/cybersecurity.jpg"
+                />
+              </div>
+              <div className="contact-audit-visual__tile contact-audit-visual__tile--tertiary">
+                <Image
+                  alt={
+                    locale === "en"
+                      ? "Workspace representing cloud operations and productivity tooling."
+                      : "Espaco de trabalho a representar operacoes cloud e ferramentas de produtividade."
+                  }
+                  className="contact-audit-visual__image"
+                  fill
+                  sizes="(max-width: 980px) 50vw, 18vw"
+                  src="/images/services/cloud-m365.jpg"
+                />
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -890,9 +924,13 @@ export function ContactPage({ locale }: { locale: Locale }) {
         <div className="container">
           <SectionHeading body={copy.contact.faqBody} title={copy.contact.faqTitle} />
           <div className="faq-list">
-            {faqItems.map((item) => (
+            {faqItems.map((item, index) => (
               <details key={item.question[locale]} className="faq-item">
-                <summary>{item.question[locale]}</summary>
+                <summary>
+                  <span className="faq-item__index">{String(index + 1).padStart(2, "0")}.</span>
+                  <span className="faq-item__question">{item.question[locale]}</span>
+                  <span className="faq-item__icon" aria-hidden="true" />
+                </summary>
                 <p>{item.answer[locale]}</p>
               </details>
             ))}

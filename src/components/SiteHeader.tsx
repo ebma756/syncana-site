@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { ArrowRightIcon } from "@/components/icons";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { MobileNavDrawer } from "@/components/MobileNavDrawer";
 import { navigation, siteCopy, withLocale, type Locale } from "@/data/site";
 
 type SiteHeaderProps = {
@@ -29,6 +30,7 @@ export function SiteHeader({ locale, pathname }: SiteHeaderProps) {
               width={178}
             />
           </Link>
+          <MobileNavDrawer locale={locale} pathname={pathname} />
           <div className="site-header__nav-wrap">
             <nav aria-label="Primary" className="site-nav">
               {navigation.map((item) => {
@@ -49,7 +51,7 @@ export function SiteHeader({ locale, pathname }: SiteHeaderProps) {
               })}
             </nav>
             <div className="site-header__actions">
-              <LanguageSwitcher label={copy.languageLabel} locale={locale} />
+              <LanguageSwitcher label={copy.languageLabel} locale={locale} pathname={pathname} />
               <Link className="button button--primary button--small" href={withLocale(locale, "/contact")}>
                 <span>{copy.primaryCta}</span>
                 <ArrowRightIcon className="button__icon" />

@@ -438,8 +438,8 @@ export const syncana360Steps = [
       pt: "Auditar o ambiente atual, expor riscos e revelar primeiro as lacunas operacionais mais importantes.",
     },
     panelTitle: {
-      en: "Discovery and Analysis of Existing IT Structures",
-      pt: "Descoberta e Análise das Estruturas de TI Existentes",
+      en: "Discovery and Analysis",
+      pt: "Descoberta e Análise",
     },
     panelDescription: {
       en: "We run an IT Risk Assessment/IT Audit at your infrastructure to identify risks, vulnerabilities, and opportunities for improvement.",
@@ -603,8 +603,8 @@ export const syncana360Steps = [
       pt: "Medir, ajustar e melhorar o ambiente para manter a TI eficiente, segura e alinhada.",
     },
     panelTitle: {
-      en: "Continuous Review & Innovation",
-      pt: "Revisão Contínua e Inovação",
+      en: "Continuous Review & Consultancy",
+      pt: "Revisão Contínua e Consultoria",
     },
     panelDescription: {
       en: "We continuously assess your IT environment, refine what is in place, and introduce improvements that keep your technology efficient, secure, and aligned with your business needs.",
@@ -1486,7 +1486,7 @@ export const siteCopy = {
     footerServicesTitle: "Our Expertise",
     footerContactTitle: "Contact Information",
     home: {
-      kicker: "Managed IT, cloud and cybersecurity in Maputo",
+      kicker: "Managed IT, cloud and cybersecurity",
       title: "Innovative, Scalable IT Solutions Built for Growing Businesses",
       description:
         "Empowering businesses in Mozambique as a trusted IT partner, from Microsoft-certified services to fully managed IT support.",
@@ -1627,7 +1627,7 @@ export const siteCopy = {
     footerServicesTitle: "A Nossa Especialização",
     footerContactTitle: "Informação de Contacto",
     home: {
-      kicker: "TI gerida, cloud e cibersegurança em Maputo",
+      kicker: "TI gerida, cloud e cibersegurança",
       title: "Soluções de TI Inovadoras e Escaláveis para Empresas em Crescimento",
       description:
         "Capacitamos empresas em Moçambique como parceiro de TI de confiança, desde serviços certificados pela Microsoft até suporte de TI totalmente gerido.",

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="520" viewBox="0 0 520 520" role="img" aria-label="Syncana 360 wheel">
+  <defs>
+    <style>
+      .base { fill: rgba(255,255,255,0.92); }
+      .inner { fill: rgba(255,255,255,0.94); stroke: rgba(37,98,194,0.16); stroke-width: 2; }
+      .seg-stroke { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 1.5; }
+      text { fill: rgba(255,255,255,0.96); font-family: "Space Grotesk", system-ui, -apple-system, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: -0.03em; }
+      .seg-2 text { fill: rgba(15,30,62,0.92); }
+    </style>
+  </defs>
+
+  <circle class="base" cx="260" cy="260" r="220" />
+  <circle class="inner" cx="260" cy="260" r="110" />
+
+  <g class="">
+    <path d="M 119.483 103.94 A 210 210 0 0 0 62.665 331.824 L 145.358 301.726 A 122 122 0 0 1 178.366 169.336 Z" fill="#2562c2" opacity="0.92" />
+    <path class="seg-stroke" d="M 119.483 103.94 A 210 210 0 0 0 62.665 331.824 L 145.358 301.726 A 122 122 0 0 1 178.366 169.336 Z" />
+    <text text-anchor="middle" transform="translate(98.931 219.841) rotate(-76)"><tspan x="0" y="0">Discovery</tspan></text>
+  </g>
+  <g class="seg-2">
+    <path d="M 365 78.135 A 210 210 0 0 0 130.711 94.518 L 184.889 163.863 A 122 122 0 0 1 321 154.345 Z" fill="#ecd575" opacity="0.92" />
+    <path class="seg-stroke" d="M 365 78.135 A 210 210 0 0 0 130.711 94.518 L 184.889 163.863 A 122 122 0 0 1 321 154.345 Z" />
+    <text text-anchor="middle" transform="translate(248.42 94.404) rotate(-4)"><tspan x="0" y="0">Planning</tspan></text>
+  </g>
+  <g class="">
+    <path d="M 465.411 303.661 A 210 210 0 0 0 377.431 85.902 L 328.222 158.857 A 122 122 0 0 1 379.334 285.365 Z" fill="#3d7be0" opacity="0.92" />
+    <path class="seg-stroke" d="M 465.411 303.661 A 210 210 0 0 0 377.431 85.902 L 328.222 158.857 A 122 122 0 0 1 379.334 285.365 Z" />
+    <text text-anchor="middle" transform="translate(413.913 197.815) rotate(68)"><tspan x="0" y="0">Onboarding</tspan></text>
+  </g>
+  <g class="">
+    <path d="M 281.951 468.85 A 210 210 0 0 0 461.865 317.884 L 377.274 293.628 A 122 122 0 0 1 272.752 381.332 Z" fill="#173f80" opacity="0.92" />
+    <path class="seg-stroke" d="M 281.951 468.85 A 210 210 0 0 0 461.865 317.884 L 377.274 293.628 A 122 122 0 0 1 272.752 381.332 Z" />
+    <text text-anchor="middle" transform="translate(366.703 387.163) rotate(320)"><tspan x="0" y="-10">Ongoing</tspan><tspan x="0" y="14">Support</tspan></text>
+  </g>
+  <g class="">
+    <path d="M 68.155 345.415 A 210 210 0 0 0 267.329 469.872 L 264.258 381.926 A 122 122 0 0 1 148.547 309.622 Z" fill="#2c5cad" opacity="0.92" />
+    <path class="seg-stroke" d="M 68.155 345.415 A 210 210 0 0 0 267.329 469.872 L 264.258 381.926 A 122 122 0 0 1 148.547 309.622 Z" />
+    <text text-anchor="middle" transform="translate(172.033 400.776) rotate(392)"><tspan x="0" y="-10">Continuous</tspan><tspan x="0" y="14">Review</tspan></text>
+  </g>
+</svg>
