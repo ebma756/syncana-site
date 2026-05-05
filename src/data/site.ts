@@ -77,6 +77,14 @@ export const navigation = [
     },
   },
   {
+    key: "solutions",
+    href: "/solutions/datashield",
+    label: {
+      en: "Solutions",
+      pt: "Soluções",
+    },
+  },
+  {
     key: "about-us",
     href: "/about-us",
     label: {

@@ -151,3 +151,107 @@ export function SparkIcon(props: IconProps) {
     </BaseIcon>
   );
 }
+
+export function DatabaseIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <ellipse cx="12" cy="5.5" rx="7.5" ry="2.5" />
+      <path d="M4.5 5.5v5c0 1.38 3.36 2.5 7.5 2.5s7.5-1.12 7.5-2.5v-5" />
+      <path d="M4.5 10.5v5c0 1.38 3.36 2.5 7.5 2.5s7.5-1.12 7.5-2.5v-5" />
+      <path d="M4.5 15.5v3c0 1.38 3.36 2.5 7.5 2.5s7.5-1.12 7.5-2.5v-3" />
+    </BaseIcon>
+  );
+}
+
+export function FileTextIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z" />
+      <path d="M14 2v5h5" />
+      <path d="M8 12h8" />
+      <path d="M8 16h8" />
+    </BaseIcon>
+  );
+}
+
+export function BellIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M6 9a6 6 0 0 1 12 0c0 7 3 7 3 7H3s3 0 3-7Z" />
+      <path d="M10 20a2 2 0 0 0 4 0" />
+    </BaseIcon>
+  );
+}
+
+export function BriefcaseIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M9 6V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1" />
+      <rect x="3" y="6" width="18" height="14" rx="2" />
+      <path d="M3 12h18" />
+      <path d="M10 12v2h4v-2" />
+    </BaseIcon>
+  );
+}
+
+export function ScaleIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M12 3v3" />
+      <path d="M5 21h14" />
+      <path d="M7 21V8h10v13" />
+      <path d="M4 8h16" />
+      <path d="M7.5 8 5 13h5l-2.5-5Z" />
+      <path d="M16.5 8 14 13h5l-2.5-5Z" />
+    </BaseIcon>
+  );
+}
+
+export function HeartPulseIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M20.8 6.6a4.7 4.7 0 0 0-6.6 0L12 8.8l-2.2-2.2a4.7 4.7 0 0 0-6.6 6.6L12 22l8.8-8.8a4.7 4.7 0 0 0 0-6.6Z" />
+      <path d="M3.5 13h3l2-4 2.2 8 2-5h3.2" />
+    </BaseIcon>
+  );
+}
+
+export function CalculatorIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <rect x="6" y="3" width="12" height="18" rx="2" />
+      <path d="M8.5 7h7" />
+      <path d="M9 11h1" />
+      <path d="M12 11h1" />
+      <path d="M15 11h1" />
+      <path d="M9 14h1" />
+      <path d="M12 14h1" />
+      <path d="M15 14h1" />
+      <path d="M9 17h7" />
+    </BaseIcon>
+  );
+}
+
+export function Building2Icon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16" />
+      <path d="M4 21h16" />
+      <path d="M9 7h1" />
+      <path d="M14 7h1" />
+      <path d="M9 11h1" />
+      <path d="M14 11h1" />
+      <path d="M9 15h1" />
+      <path d="M14 15h1" />
+    </BaseIcon>
+  );
+}
+
+export function ShieldCheckIcon(props: IconProps) {
+  return (
+    <BaseIcon {...props}>
+      <path d="M12 3 5 6v6c0 4.97 3.05 8.86 7 10 3.95-1.14 7-5.03 7-10V6l-7-3Z" />
+      <path d="m9.5 12.5 1.8 1.8 3.7-4.3" />
+    </BaseIcon>
+  );
+}
